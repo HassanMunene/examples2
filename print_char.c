@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_char -
  * @i: will receive the address of the i iterator
