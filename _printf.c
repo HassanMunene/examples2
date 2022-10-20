@@ -1,16 +1,18 @@
 #include "main.h"
 
 /**
- * _printf - this function prints the formated string
+ * _printf - prints formated string to stdout
  *
- * @format:
+ * @format: the string to be printed
+ * @...: variadic parameters
  *
- * Return: The number of characters printed.
+ * Return: The number of characters printed 
+ *         excluding null byte.
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;  /* this will be used to loop through the different formats*/
-	int count = 0; /* will be used to hold the number of characters printed*/
+	int i = 0;
+	int count = 0;
 	int ret = 0;  /* will return the number of characters printed by the different functions that we will call*/
 
 	va_list ptr;
@@ -25,15 +27,9 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				ret = print_string(&i, ptr, format, &count);
 				ret = print_char(&i, ptr, format, &count);
-				ret = ptr_digits(&i, ptr, format, &count);
+				ret = print_string(&i, ptr, format, &count);
 				ret = print_percent(&i, format, &count);
-				ret = print_unsigned_digits(&i, ptr, format, &count);
-				ret = print_binary(&i, ptr, format, &count);
-				ret = print_hex(&i, ptr, format, &count);
-				ret = print_octal(&i, ptr, format, &count);
-				ret = print_ptr(&i, ptr, format, &count);
 
 				if (ret == -1)
 				{
