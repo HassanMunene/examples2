@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_char -
+ * print_char - prints char
  * @i: will receive the address of the i iterator
  * @ptr: the variadic argument
  * @format: will recieve the address of the format

@@ -1,11 +1,12 @@
 #include "main.h"
-
 /**
+ * print_string - prints string
+ * @i: receive the address of the i iterator
+ * @ptr: the variadic argument
+ * @format: will recieve the address of the format
+ * @count: will recieve the address of the count
  *
- *
- *
- *
- *
+ * Return: the number of charcters printed
  */
 int print_string(int *i, va_list ptr, const char *format, int *count)
 {
