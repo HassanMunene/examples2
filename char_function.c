@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_char -
- * @i: will receive the address of the i iterator
- * @ptr: the variadic argument
- * @format: will recieve the address of the format
- * @count: will recieve the address of the count
+ * print_char - print char
+ * @i: i
+ * @ptr: ptr
+ * @format: format
+ * @count: count
  *
- * Return: the number of charcters printed
+ * Return: int
  */
 int print_char(int *i, va_list ptr, const char *format, int *count)
 {
@@ -16,9 +16,8 @@ int print_char(int *i, va_list ptr, const char *format, int *count)
 		char c = va_arg(ptr, int);
 
 		if (c == 0)
-		{
 			return (-1);
-		}
+
 		_putchar(c);
 		*count = *count + 1;
 		*i = *i + 1;
