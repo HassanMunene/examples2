@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 			else
 			{
 				ret = print_char(&i, ptr, format, &count);
+				ret = print_string(&i, ptr, format, &count);
+				ret = print_percent(&i, format, &count);
 
 				if (ret == -1)
 				{
